@@ -1,0 +1,12 @@
+<div>
+    <button class="btn btn-shadow" (click)="openModal()">Connect Wallet</button>
+    <button (click)="disconnect()">Disconnect Wallet</button>
+    <div *ngIf="currentIsConnectedStatus">
+        <h3>Connected Wallet Information</h3>
+        <p><strong>Status:</strong> {{ currentIsConnectedStatus | json }}</p>
+    </div>
+
+    <div *ngIf="!currentIsConnectedStatus">
+        <h3>No wallet connected</h3>
+    </div>
+</div>

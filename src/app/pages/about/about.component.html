@@ -1,0 +1,15 @@
+<div id="ID">
+
+    <button (click)="disconnect()">Disconnect Wallet</button>
+    <div *ngIf="currentIsConnectedStatus">
+        <h3>Connected Wallet Information</h3>
+        <p><strong>Name:</strong> {{ currentWalletInfo.appName | json }}</p>
+        <p><strong>Address:</strong> {{ currentAccount.address | json }}</p>
+        <p><strong>Network:</strong> {{ currentAccount.chain | json }}</p>
+    </div>
+
+    <div *ngIf="!currentIsConnectedStatus">
+        <h3>No wallet connected</h3>
+    </div>
+
+</div>
